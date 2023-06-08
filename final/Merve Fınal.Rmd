@@ -1,0 +1,179 @@
+---
+title: "İSTANBUL DEPREMİ RİSK SENARYOSU"
+author: 
+  - MERVENUR BÜLBÜL[^1]
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa-tr.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{turkish}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+abstract: |
+  "İstanbul Depremi Risk Senaryosu" çalışması, Türkiye'nin en büyük metropolünün, tarihi ve coğrafi gerçekleri göz önünde bulundurarak olası bir deprem karşısındaki durumunu analiz ediyor. Ülkemiz deprem kuşağında yer alması sebebiyle zaman zaman büyük yıkımlara yol açan depremlerle karşı karşıya kalıyor. İstanbul'un potansiyel deprem riskinin bilincinde olan bilim insanları, bu çalışmayla İstanbul'un bu felaket senaryosu karşısında ne gibi sonuçlarla karşılaşabileceğini göstermeyi hedefliyor. Bu detaylı çalışma, İstanbul'un farklı yerleşim bölgelerinin depreme olan hassasiyetini, coğrafi konumları ve yapılaşma yoğunlukları göz önünde bulundurarak inceliyor. Özellikle kentsel dönüşümün yetersiz kaldığı bölgeler, eski ve dayanıksız yapılar, riskin daha yüksek olduğu alanlar olarak belirleniyor. Aynı zamanda, şehrin önemli altyapı sistemleri ve hayati tesislerinin, olası bir deprem karşısında nasıl etkilenebileceği detaylı bir şekilde analiz ediliyor. Bunlar arasında su ve enerji tesisleri, hastaneler, ulaşım ağları ve okullar gibi hayati öneme sahip yapılar yer alıyor. Rapor, bir deprem anında can ve mal kaybının boyutlarını da tahmin etmeye çalışıyor. Bunun için önceki depremlerden elde edilen veriler ve İstanbul'un mevcut durumu göz önünde bulunduruluyor. Bu bölüm, özellikle depreme hazırlık çalışmalarının planlanmasında ve yönetilmesinde kritik önem taşıyor.
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+<!-- ======================================================================= -->
+<!-- ============================== NOTLAR ================================= -->
+<!-- ======================================================================= -->
+[^1]: 19080207, [Github Repo](https://github.com/mervebulbul1/grade)
+
+
+
+# Giriş
+
+Bilim insanlarının 2030 yılına kadar gerçekleşmesini beklediği İstanbul depremi hakkında risk analizi araştırma konumdur. Veri setimi İstanbul Büyükşehir Belediye sitesinden buldum. Verimde yer alan gözlemler İstanbul'un ilçeleri değişkenler ise hasar derecesine göre binalar, can kaybı yaralı sayısı, doğal gaz borusu ve içme suyu borusu hasarları atık su boru hasarı ve geçici barınma.
+
+Doğal afetlerin kentsel alanlara verdiği zararları ve risk analizinin önemini ele almaktadır. İstanbul'da olası bir depremin risk seviyeleri, 15 değişken kullanılarak ölçülmüş ve incelenmiştir. Bu değişkenler, tehlike ve maruziyeti ifade etmektedir. Ayrıca, deprem risk analizinin veri gerektirdiği ve kentsel alanların karmaşık yapılarının keşfedilmesinin zorluğuna dikkat çekilmektedir.
+
+Bu nedenle, deprem risk analizi için doğru ve güvenilir verilerin toplanması ve analiz edilmesi önemlidir. Bu veriler, binaların yapısal özellikleri, altyapı sistemleri, nüfus yoğunluğu, arazi kullanımı ve diğer faktörleri içermelidir. Ancak, kentsel alanların karmaşık yapıları ve veri toplama sürecindeki zorluklar, doğru verilerin toplanmasını ve analiz edilmesini zorlaştırabilir. Bu nedenle, doğru verilerin toplanması için etkili yöntemler ve teknolojiler kullanılmalıdır. İstanbul’da depreme bağlı risk düzeyleri için , toplam içerisindeki açıklama düzeyleri ve güvenilirlikleri sınanmak suretiyle 15 bağımsız değişkene indirgenmiştir. Bu 15 değişken ana bileşenler analizi kullanılarak, “hasar görebilirlik”, “yoğunluk”, “işyeri ve yanıcı/patlayıcı kullanımlar”, “tehlike” ve “potansiyeller” başlıkları altında olmak üzere 5 ana bileşen altında toplanmıştır. İlk ana bileşen mahallenin yaşı, konut sayısı, plansız yapılaşmış alanların yüzdesi, hassas yaş grupları, arazi değeri ve öğrenci sayısını kapsa- yan “hasar görebilirlik” bileşeni olarak tanımlanmıştır. Tehlike bileşeni, mahalle ölçeğinde, 7.7 büyük- lüğündeki bir depremin yaratacağı ortalama iv- me tepki spektrum değerini ve eğimi %30’un üzerinde olan alanların oranını kapsamaktadır. .
+
+İstanbul Türkiye'nin en yüksek deprem riskine sahip şehirlerinden biridir. İstanbul, Kuzey Anadolu Fay Hattı üzerinde yer alır ve tarihi kayıtlara göre, 1509 ve 1766 yıllarında şiddetli depremler yaşamıştır. Bu depremler, şehrin büyük bir kısmını yıkarak binlerce insanın hayatını kaybetmesine neden olmuştur. Son yıllarda, İstanbul'da yaşanabilecek olası bir deprem konusunda ciddi endişeler artmaktadır. 1999 yılında Kocaeli ve Düzce depremleri, Türkiye'nin en sanayileşmiş bölgesinde meydana gelmiş ve toplam ekonomik kayıplar 22 milyar doları bulmuştur. Bu kayıplar, o yılın milli gelirinin %12'sine denk gelmektedir. İstanbul, bu depremlerden etkilenmemiş olsa da, bölgedeki tarihi depremler ve Kuzey Anadolu Fay Hattı'nın İstanbul'dan geçmesi, şehrin yüksek deprem riskine sahip olduğunu göstermektedir. Bu nedenle, İstanbul'da olası bir depremin risk analizi yapılması büyük önem taşımaktadır.
+
+Binaların güçlendirilmesi ve altyapı sistemlerinin iyileştirilmesi gibi stratejiler, deprem sonrası hasarın azaltılmasına ve insanların hayatını kurtarmaya yardımcı olabilir. Ayrıca, acil durum planlarının hazırlanması ve afet yönetimi süreçlerinin geliştirilmesi de önemlidir.
+
+Deprem riski, birçok faktörün birleşiminden oluşan karmaşık bir yapıya sahiptir. Bu faktörler arasında yerleşim bölgelerinin coğrafi konumu, yapılaşma yoğunluğu, altyapı sistemlerinin dayanıklılığı ve toplumun depreme karşı dayanıklılığı bulunur. Bu makalede, İstanbul'un bu faktörler açısından durumu ayrıntılı bir şekilde ele alınacaktır.
+
+İstanbul'un yerleşim bölgelerinin deprem riski, çeşitli faktörlere bağlıdır. Bunlar arasında yerleşim bölgelerinin coğrafi konumu, yapılaşma yoğunluğu ve kentsel dönüşüm projelerinin etkinliği bulunmaktadır. İstanbul'un çeşitli bölgelerindeki yapılaşma yoğunluğu, deprem riskini önemli ölçüde artırmaktadır. Özellikle eski yapıların yoğun olduğu bölgeler, yetersiz inşaat standartları nedeniyle deprem riski taşımaktadır. Bu bağlamda, İstanbul'da deprem riskinin azaltılması için kentsel dönüşüm projeleri büyük önem taşımaktadır.
+
+Altyapı sistemlerinin dayanıklılığı da deprem riskinin önemli bir faktörüdür. İstanbul'un karmaşık ve geniş çaplı altyapı sistemi, olası bir deprem durumunda büyük hasar görebilir. Bu nedenle, altyapı sistemlerinin depreme dayanıklı hale getirilmesi, deprem riskinin azaltılması için önemli bir stratejidir.
+
+
+
+
+
+## Çalışmanın Amacı
+Türkiye bulunduğu konum itibariyle arazilerinin % 42’si birinci dereceden, % 24’ü ikinci dereceden ve % 18’i ise üçüncü dereceden deprem bölgesi içinde yer almaktadır.istanbul’da birinci dereceden deprem bölgesinde yer almaktadır.Türkiye’yi doğu batı yönünde kuşatan yaklaşık 1500 km uzunluğundaki Kuzey Anadolu Fayı (KAF)ın İstanbul ’un güneyinde Marmara Denizi içindeki yaklaşık 200 kilometrelk kısmının kareket geçmesi ile oluşacak depremin büyüklüğünün 7.7 ve 2030 yılına kadar gerçekleşme olasılığının %62 olduğu hesaplanmıştır.
+
+Genel anlamda risk, herhangi bir tehlikenin meydana gelme olasılığı ile bu tehlikenin neden olacağı sonuçların bileşkesidir. Başka bir değişle, risk düzeyi tehlikenin büyüklüğü ve etkilenen elemanların savunmasızlığıyla orantılıdır. Sismik tehlike analizinde kullanılan veri tabanı depremin olma olasılığı, olası büyüklüğü ve yakın çevresinde yaratacağı şiddet gibi bilgilerden oluşmaktadır. Sismik risk analizinin çıktıları ise depreme bağlı can kayıpları başta olmak üzere yollar, köprüler, barajlar ve sanayi tesisleri gibi yapıların zarar görmesi nedeniyle oluşacak maddi kayıpların tahminlerini kapsamaktadır. KAF faaliyetlerinin tarihi kayıtlarına göre, İstanbul iki büyük deprem yaşamıştır. 1509 ve 1766’da tüm şehri yerle bir eden depremlerler olmuştur.* Bu çalışmayla olası İstanbul depremi sonucunda meydana gelebilecek hasarların neler olabileceği araştırılacaktır.
+
+
+## Literatür 
+
+Depremin yol açacağı hasar ve can kaybının tahmini, depremin zararlarının öngörülmesi açısından çok önemlidir .Deprem riskini etkileyen faktörler; deprem tehlikesi, arazi kullanımı, demografik yapı ve ekonomik yapı olarak 4 başlık altında değerlendirilebilir. Deprem tehlikesi, başta depremin büyüklüğü olmak üzere, deprem dalgalarının farklı zeminlerdeki yayılım hızları ve yarattıkları ivme değerleriyle ölçülebilmektedir. Ayrıca, depremin tetiklediği zemin sıvılaşması, heyelan ve tsunami gibi diğer tehditler de deprem tehlikesi kapsamında incelenmektedir(@erdik2008earthquake). Arazi kullanım şekilleri ve yapısı, etkilenmesi beklenen bölgede yaşayan nüfusun demografik durumu ve yine bu bölgenin ekonomik gücü, deprem riskinin değerlendirilmesinde hasar görebilirlik modülünü oluşturmaktadır (@kundak2010istanbul). Arazi kullanımını oluşturan değişkenler sadece farklı kullanım dokularını değil, bu dokuları oluşturan öğelerin deprem karşısındaki davranış biçimlerini de içermektedir. Bina yoğunluğu, yapı tarzı, kat yükseklikleri ve altyapı sisteminin farklı noktalarındaki farklı özellikleri, yapılaşmış çevrenin deprem riski açısından değerlendirilmesinde temel başlıkları oluşturmaktadır. Genel arazi kullanım dokusu göz önüne alındığında barınma, kamusal hizmetler, ticaret, sanayi ve altyapı sistemleri şeklinde bir gruplama yapılabilir(@parsons2000heightened).
+   
+   Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü'nün yaptığı tahminlere göre,7,5 büyüklüğünde bir depremin gece meydana gelmesi durumunda, ortalama can kaybının 14.150 civarında olacak ve ağır yaralı sayısı 8.100 civarında olacak. Eğer gündüz saatlerinde meydana gelen depremde 12.400 kişinin ölebileceği ve 7.450 kişinin ağır yaralanabileceği tahmin edilmektedir.7,5 büyüklüğünde, İstanbul'daki binaların %26'sının hafif,%13 orta, %3 ağır ve %1 çok ağır hasarlı olduğunun tahmini üzerine 26,04 milyar dolar ekonomik kayba neden olabilir.(@simsek2021big). 
+
+Tehlike bölgesinde yer alan kullanım, maruz kalabileceği etki ve bu etki sonucunda görebileceği zarar temel alınarak risk derecelendirmesi yapılmaya çalışılmıştır(@kundak2007evaluation). Özellikle;ana ulaşım hatlarında önemli fonksiyonları olan merkezler (liman, karayolu düğüm noktaları, v.s...) ,altyapı tesisi (doğalgaz boru hattı, elektrik hattı, trafo, köprü-viyadük v.s...), sanayi tesisi (küçük sanayi, organize sanayi bölgesi v.s...),depolama alanı (kimyevi madde depo alanı, çöp depolama alanı,..),tehlikeli madde alanı (LPG, akaryakıt dolum tesisleri ve tankları vb(@kundak2005assessment). Yanıcı, patlayıcı kullanım, radyoaktif kullanım,...),ticaret-iş merkezi, gibi kullanımların belirlenen tehlike bölgelerinde bulunması, risk düzeyini arttıran faktörler
+olarak düşünülmüştür. Bu alanların alacakları tehlikeler,
+• İnsan hayatı kaybı,
+• Maddi değerlerin kaybı ve
+• Kentsel servis kaybı
+gibi boyutlarıyla bir sınıflama içerisinde ele alınarak hangi değerlerin ne boyutta tehlike altına girebileceği hesaplanmaya çalışılmıştır.
+
+
+
+# Veri 
+
+Çalışmamdaki veri setimi İstanbul Büyükşehir Belediyesinin sitesinden buldum. Ham veri seti üzerinde bir değişiklik yapmadım 1-150 satırlar arasını işlemlerimde kullandım(Tablo \ref{tab:ozet}). En az hasarı doğalgaz borularının en çok hasar grubunun ise hafif hasarlı binaların aldığını görüyoruz(@ibbdepremsenaryosu).
+
+
+
+```{r t8, echo=FALSE}
+library(here)
+library(readr)
+library(readxl)
+
+dahanormalbirisim <- read_excel("../data/deprem.xlsx")
+ 
+
+```
+
+
+
+```{r echo=FALSE}
+library(xtable) 
+# devtools::install_github("emraher/summarytools")
+library(summarytools)
+st_options(lang = "tr")
+```
+
+
+
+
+```{r echo=FALSE, , echo=FALSE, results='asis'}
+library(magrittr)
+library(dplyr)
+library(xtable)
+library(summarytools)
+
+dahanormalbirisim %>%
+  select(where(is.numeric)) %>%
+  descr(stats = c("mean", "sd", "min", "med", "max"), transpose = TRUE)  %>% 
+  xtable(caption = "İSTANBUL DEPREMİ RİSK SENARYOSU ÖZET İSTATİSTİKLER",
+         label = "tab:ozet",
+         align = c("l", "c", "c", "c", "c", "c"))  %>%
+  print(booktabs = TRUE, comment = FALSE, caption.placement = "top")
+
+
+```
+
+
+# Yöntem ve Veri Analizi
+İstanbul'un deprem riskinin analizinde çeşitli yöntemler ve veri setleri kullanılmıştır. Bu yöntemlerin her biri, İstanbul'un deprem riskinin farklı boyutlarını ele almaktadır.
+
+```{r bar, echo=FALSE, fig.cap='Agir Hasarli Bina Sayisi ve Geçici Barınma'}
+library(ggplot2)
+dahanormalbirisim %>% 
+  ggplot(aes(x = agir_hasarli_bina_sayisi , y = gecici_barinma)) +
+  geom_point() +
+  geom_smooth() +
+  scale_x_continuous(" Agir Hasarli Bina Sayisi") + 
+  scale_y_continuous(" Geçici Barınma")
+```
+
+Jeofizik ve sismoloji analizlerinde, Kuzey Anadolu Fay Hattı üzerinde gerçekleştirilen önceki çalışmalardan elde edilen veriler kullanılmıştır. Bu veriler, fay hattının hareketlerini ve İstanbul'a olan yakınlığını değerlendirmek için kullanılmıştır. Yapı mühendisliği değerlendirmelerinde, İstanbul'daki yapı stoğunun ve altyapı sistemlerinin depreme dayanıklılığını değerlendirmek için çeşitli veriler kullanılmıştır(Şekil \@ref(fig:you)).
+
+```{r air, echo=FALSE, fig.cap='İlçelerdeki Can Kaybı'}
+dahanormalbirisim %>%
+  ggplot(aes(x = can_kaybi_sayisi, y = ilce_adi)) +
+  geom_boxplot() +
+  labs(x = "Can Kaybi Sayisi ", y = "İlçe Adi")
+```
+
+ Bu veriler, İstanbul'da yapılaşma yoğunluğu, binaların yaşları ve yapı standartları hakkında bilgi sağlamaktadır(Şekil \@ref(fig:tell)). Bu değerlendirmeler, İstanbul'un depreme dayanıklılık kapasitesini belirlemekte ve risk azaltma stratejileri geliştirmekte yardımcı olmuştur.
+
+```{r you, echo=FALSE, fig.cap='Altyapı Hasarları'}
+library(ggplot2)
+
+library(patchwork)
+
+ggplot(dahanormalbirisim) + geom_point(aes(dogalgaz_boru_hasari , icme_suyu_boru_hasari))
+```
+
+```{r tell, echo=FALSE, fig.cap='İlçelerdeki Agir Hasarli Bina Sayisi'}
+ggplot(dahanormalbirisim) + geom_point(aes(agir_yarali_sayisi, ilce_adi))
+```
+
+Sosyo-ekonomik analizlerde, İstanbul'un geniş ve çeşitli toplumunu anlamak için çeşitli demografik ve ekonomik veriler kullanılmıştır.     Bu veriler, İstanbul'un toplumsal ve ekonomik yapıları hakkında bilgi sağlamaktadır. Bu analizler, depremin toplum üzerindeki potansiyel etkilerini değerlendirmekte ve toplumsal dayanıklılık stratejileri geliştirmekte yardımcı olmuştur. Bu yöntemler ve veri setleri, İstanbul'un deprem riskini çok yönlü bir şekilde analiz etmekte ve şehrin bu riski yönetme kapasitesini artırmak için kullanılabilecek bilgiler sağlamaktadır.
+
+
+
+
+
+
+# Sonuç
+Kentsel arazi kullanımı ve buna bağlı olarak nüfus dağılımına ilişkin bileşenlerin kentsel hasar görebilirliği ve dolayısıyla da depreme bağlı riski arttırdığı ortaya çıkmıştır. Risk azaltımına yönelik çalışmalar kent genelindeki donatı, fonksiyon ve nüfus dağılımının dengeli bir şekilde gelişmesine yönelik olmalıdır. Kentsel donatılardan sağlık ve eğitim gibi acil durum donatıların yer seçimleri ve erişilebilirlik düzeyleri diğer doğal ve teknolojik tehditler açısında da değerlendirilerek tasarlan- malıdır. Doğal ve teknolojik afetlerin yapılaşmış çevre ve üretim potansiyelinde neden olduğu ekonomik kayıpların bölge ve ülke ölçeğindeki etkileri uzun süreli olmaktadır. Özellikle İstanbul gibi bir metropolün ülke ekonomisine katkısı göz önüne alınacak olursa, kent genelindeki sanayi ve hizmet alanlarının yer seçimi ve planlama kriterleri uzun vadeli ve üretime dayalı ekonomik kayıpların azaltılmasında önem kazanmaktadır(Şekil \@ref(fig:air)). Ağır yaralı sayısının deprem dayanıklılığının en az olduğu Bahçelievler ilçesinde en çok olduğunu ve yazıda yer alan önergeleri doğruladığını görüyoruz grafiklerin,Arnavutköy ise  ağır yaralı sayısının en az olduğu ilçedir. Plansız yapılaşma oranı ,nüfus yoğunluğu, bina yoğunluğu, konut adedi arttıkça hasar alacak bina sayısı ve yaralanma oranlarının arttığını gözlemliyoruz. Ağır hasarlı binaların en çok olduğu Bahçelievler'de geçici barınma için ihtiyacında en çok olduğu yerdir(Şekil \@ref(fig:bar)). Altyapının en kötü olduğu yerlerde içme suyu ve doğalgaz boru hasarları en çoktur.
+
+
+\newpage
+# Kaynakça {#references}
+<div id="refs"></div>
+
