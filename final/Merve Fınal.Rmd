@@ -91,7 +91,7 @@ library(here)
 library(readr)
 library(readxl)
 
-dahanormalbirisim <- read_excel("../data/deprem.xlsx")
+dahanormalbirisim <- read_excel("../veri/deprem.xlsx")
  
 
 ```
